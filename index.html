@@ -477,7 +477,8 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
-<body>    <header>
+<body>
+    <header>
         <nav>
             <div class="logo">Aini Hilda Muliana</div>
             <ul>
@@ -495,7 +496,7 @@
             </div>
         </nav>
     </header>
-
+    
     <section id="beranda" class="hero parallax">
         <div class="hero-content">
             <h1>Selamat Datang di STIKES Dian Husada Mojokerto</h1>
@@ -894,11 +895,13 @@
         </footer>
         
         <script>
-            // Header scroll effect
-            window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            header.classList.toggle('scrolled', window.scrollY > 0);
-            });
+            // Toggle mobile menu
+            function toggleMenu() {
+                const menuToggle = document.querySelector('.hamburger');
+                const menu = document.querySelector('nav ul');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
             // Smooth scrolling
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
